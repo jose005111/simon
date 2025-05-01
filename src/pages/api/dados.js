@@ -3,7 +3,7 @@ import mysql from 'mysql2/promise';  // Use a versão 'promise' para usar await
 
 export default async function handler(req, res) {  
   // Crie o pool de conexões ou conexão na própria função  
-  const connection = await mysql.createConnection(process.env.DB_URL);  
+  const connection = await mysql.createConnection("mysql://root:MshaCAexFGLBeAzDBZKHRbiKRHNXKMEi@metro.proxy.rlwy.net:58662/railway");  
 
   if (req.method === 'POST') {  
     const { email, senha } = req.body;  
